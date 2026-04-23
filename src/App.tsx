@@ -9,14 +9,22 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 for forward, -1 for backward
   const [showDetails, setShowDetails] = useState(false);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   const visibleAssets = ASSETS.slice(0, visibleCount);
 
   const loadMore = useCallback(() => {
-    if (visibleCount < ASSETS.length) {
-      setVisibleCount(prev => Math.min(prev + 10, ASSETS.length));
+    if (visibleCount < ASSETS.length && !isLoadingMore) {
+      setIsLoadingMore(true);
+      setShowDetails(false);
+      
+      // Artificial short delay to stabilize 3D scene reconciliation
+      setTimeout(() => {
+        setVisibleCount(prev => Math.min(prev + 10, ASSETS.length));
+        setIsLoadingMore(false);
+      }, 500);
     }
-  }, [visibleCount]);
+  }, [visibleCount, isLoadingMore]);
 
   const goToNext = useCallback(() => {
     if (currentIndex < visibleAssets.length - 1) {
@@ -163,13 +171,22 @@ export default function App() {
                  {currentIndex === visibleAssets.length - 1 && visibleCount < ASSETS.length && (
                    <motion.button
                      onClick={loadMore}
+                     disabled={isLoadingMore}
                      initial={{ scale: 0.8, opacity: 0, y: 10 }}
                      animate={{ scale: 1, opacity: 1, y: 0 }}
                      whileHover={{ scale: 1.05 }}
                      whileTap={{ scale: 0.95 }}
-                     className="bg-white text-slate-900 px-6 py-4 rounded-xl font-black uppercase tracking-widest text-[11px] shadow-2xl flex items-center justify-center gap-3 border-2 border-white/50"
+                     className={`px-6 py-4 rounded-xl font-black uppercase tracking-widest text-[11px] shadow-2xl flex items-center justify-center gap-3 border-2 transition-all ${
+                       isLoadingMore 
+                         ? "bg-slate-800 text-white border-slate-700 opacity-50" 
+                         : "bg-white text-slate-900 border-white/50"
+                     }`}
                    >
-                     Explore Next 10 Businesses <ChevronRight size={18} className="text-orange-500" />
+                     {isLoadingMore ? (
+                       <>Expansion In Progress...</>
+                     ) : (
+                       <>Explore Next 10 Businesses <ChevronRight size={18} className="text-orange-500" /></>
+                     )}
                    </motion.button>
                  )}
                </div>

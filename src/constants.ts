@@ -200,7 +200,7 @@ export const ASSETS: AssetInfo[] = [
     title: 'Shree Jalaram Appliances',
     subtitle: 'Kitchen & Home',
     description: 'Premium kitchen appliances and home convenience products.',
-    imageUrl: 'https://images.unsplash.com/photo-1556911220-e15595ff4f8a?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop',
     pillarId: '17',
     mobile: '02744222226',
     website: 'https://saiimpex.my',
@@ -236,6 +236,107 @@ export const ASSETS: AssetInfo[] = [
     imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop',
     pillarId: '20',
     mobile: '09228150365',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '21',
+    title: 'Bhupatsing Jenaji Parmar',
+    subtitle: 'Electronic Service Ran',
+    description: 'Specialized maintenance and repair services for industrial and household electronics.',
+    imageUrl: 'https://images.unsplash.com/photo-1510511459019-5dee997dd3df?q=80&w=800&auto=format&fit=crop',
+    pillarId: '21',
+    mobile: '8980944271',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '22',
+    title: 'Apex Electricals',
+    subtitle: 'Industrial Solutions',
+    description: 'Wholesale suppliers of electrical cables, breakers, and high-voltage equipment.',
+    imageUrl: 'https://images.unsplash.com/photo-1517420812314-8e161730099d?q=80&w=800&auto=format&fit=crop',
+    pillarId: '22',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '23',
+    title: 'Deesa Solar Systems',
+    subtitle: 'Renewable Energy',
+    description: 'Eco-friendly solar panel installations and maintenance for sustainable power.',
+    imageUrl: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop',
+    pillarId: '23',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '24',
+    title: 'Metro Wire & Cables',
+    subtitle: 'Manufacturing',
+    description: 'Premium quality wires and robust transmission cables for heavy-duty usage.',
+    imageUrl: 'https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=800&auto=format&fit=crop',
+    pillarId: '24',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '25',
+    title: 'Smart Home Hub',
+    subtitle: 'Automation',
+    description: 'Transform your living space with integrated smart home and lighting automation.',
+    imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df8d7?q=80&w=800&auto=format&fit=crop',
+    pillarId: '25',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '26',
+    title: 'City Electric Co.',
+    subtitle: 'Contractors',
+    description: 'Reliable electrical contracting for large-scale urban infrastructure projects.',
+    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop',
+    pillarId: '26',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '27',
+    title: 'Voltage Tech Services',
+    subtitle: 'Equipment Repair',
+    description: 'Diagnostics and hardware repair for high-precision laboratory and office tech.',
+    imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop',
+    pillarId: '27',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '28',
+    title: 'Bright Ray Lighting',
+    subtitle: 'Design Studio',
+    description: 'Architectural lighting design that merges aesthetic appeal with energy efficiency.',
+    imageUrl: 'https://images.unsplash.com/photo-1513506496266-aa6bb1b7ba20?q=80&w=800&auto=format&fit=crop',
+    pillarId: '28',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '29',
+    title: 'Industrial Fuse & Switch',
+    subtitle: 'Safety Components',
+    description: 'High-quality protection gear and automatic cut-off switches for power boards.',
+    imageUrl: 'https://images.unsplash.com/photo-1498048182197-285d1d6a89c3?q=80&w=800&auto=format&fit=crop',
+    pillarId: '29',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
+  },
+  {
+    id: '30',
+    title: 'Master Circuits',
+    subtitle: 'PCB Design',
+    description: 'Expert PCB board design and electronic component assembly services.',
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+    pillarId: '30',
     website: 'https://saiimpex.my',
     category: 'Electronics'
   },

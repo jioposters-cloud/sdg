@@ -186,13 +186,28 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
             <meshStandardMaterial color="#000" roughness={0} metalness={1} opacity={0.8} transparent />
          </mesh>
 
-         <Image 
-            url={asset.imageUrl} 
-            transparent 
-            scale={[4.5, 3.2]}
-            zoom={1}
-            position={[0, 0, 0.05]}
-         />
+         {asset.imageUrl ? (
+           <Image 
+              url={asset.imageUrl} 
+              transparent 
+              scale={[4.5, 3.2]}
+              zoom={1}
+              position={[0, 0, 0.05]}
+           />
+         ) : (
+           <Text
+             position={[0, 0, 0.05]}
+             fontSize={0.4}
+             color="#fff"
+             maxWidth={4}
+             textAlign="center"
+             font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2f-A.woff"
+             anchorX="center"
+             anchorY="middle"
+           >
+             {asset.title.toUpperCase()}
+           </Text>
+         )}
 
          {/* Neon Frame Border (Horizontal sides for landscape look) */}
          <mesh position={[0, 1.65, 0.01]}>
