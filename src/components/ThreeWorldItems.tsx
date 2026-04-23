@@ -186,7 +186,7 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
             <meshStandardMaterial color="#000" roughness={0} metalness={1} opacity={0.8} transparent />
          </mesh>
 
-         {asset.imageUrl ? (
+         {asset.imageUrl && asset.imageUrl.startsWith('http') ? (
            <Image 
               url={asset.imageUrl} 
               transparent 
@@ -199,11 +199,13 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
              position={[0, 0, 0.05]}
              fontSize={0.4}
              color="#fff"
-             maxWidth={4}
+             maxWidth={4.2}
              textAlign="center"
              font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2f-A.woff"
              anchorX="center"
              anchorY="middle"
+             outlineWidth={0.02}
+             outlineColor="#000"
            >
              {asset.title.toUpperCase()}
            </Text>
