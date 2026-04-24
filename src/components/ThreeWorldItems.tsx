@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, Suspense } from 'react';
 import * as THREE from 'three';
 import { Image, Text } from '@react-three/drei';
 import { ASSETS } from '../constants';
@@ -9,13 +9,13 @@ export function Pavement() {
   return (
     <group>
       {/* Road */}
-      <mesh rotation-x={-Math.PI / 2} position={[0, -0.01, -100]} receiveShadow>
-        <planeGeometry args={[10, 1000]} />
+      <mesh rotation-x={-Math.PI / 2} position={[0, -0.01, -500]} receiveShadow>
+        <planeGeometry args={[10, 2000]} />
         <meshStandardMaterial color="#222" roughness={0.8} />
       </mesh>
       
       {/* Road Markings */}
-      {Array.from({ length: 50 }).map((_, i) => (
+      {Array.from({ length: 100 }).map((_, i) => (
         <mesh key={i} rotation-x={-Math.PI / 2} position={[0, 0, -i * 20]} receiveShadow>
           <planeGeometry args={[0.15, 5]} />
           <meshStandardMaterial color="#fff" transparent opacity={0.4} />
@@ -23,12 +23,12 @@ export function Pavement() {
       ))}
 
       {/* Sidewalk/Curb */}
-      <mesh rotation-x={-Math.PI / 2} position={[7, 0.1, -100]} receiveShadow>
-        <planeGeometry args={[4, 1000]} />
+      <mesh rotation-x={-Math.PI / 2} position={[7, 0.1, -500]} receiveShadow>
+        <planeGeometry args={[4, 2000]} />
         <meshStandardMaterial color="#444" />
       </mesh>
-      <mesh rotation-x={-Math.PI / 2} position={[-7, 0.1, -100]} receiveShadow>
-        <planeGeometry args={[4, 1000]} />
+      <mesh rotation-x={-Math.PI / 2} position={[-7, 0.1, -500]} receiveShadow>
+        <planeGeometry args={[4, 2000]} />
         <meshStandardMaterial color="#444" />
       </mesh>
     </group>
@@ -39,7 +39,7 @@ export function Infrastructure() {
   return (
     <group>
       {/* Repeating Bridge Segments */}
-      {Array.from({ length: 120 }).map((_, i) => (
+      {Array.from({ length: 250 }).map((_, i) => (
         <group key={i} position={[0, 8, -i * 8]}>
           {/* Main Massive Top Beam (Transverse) */}
           <mesh position={[0, 0, 0]} castShadow receiveShadow>
@@ -186,30 +186,39 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
             <meshStandardMaterial color="#000" roughness={0} metalness={1} opacity={0.8} transparent />
          </mesh>
 
-         {asset.imageUrl && asset.imageUrl.startsWith('http') ? (
-           <Image 
-              url={asset.imageUrl} 
-              transparent 
-              scale={[4.5, 3.2]}
-              zoom={1}
-              position={[0, 0, 0.05]}
-           />
-         ) : (
+         <Suspense fallback={
            <Text
              position={[0, 0, 0.05]}
-             fontSize={0.4}
+             fontSize={0.2}
              color="#fff"
-             maxWidth={4.2}
-             textAlign="center"
-             font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2f-A.woff"
-             anchorX="center"
-             anchorY="middle"
-             outlineWidth={0.02}
-             outlineColor="#000"
+             fillOpacity={0.3}
            >
-             {asset.title.toUpperCase()}
+             LOADING...
            </Text>
-         )}
+         }>
+           {asset.imageUrl && index < 10 ? (
+             <Image 
+                url={asset.imageUrl} 
+                transparent 
+                scale={[4.5, 3.2]}
+                zoom={1}
+                position={[0, 0, 0.05]}
+             />
+           ) : (
+             <Text
+               position={[0, 0, 0.05]}
+               fontSize={0.4}
+               color="#fff"
+               maxWidth={4}
+               textAlign="center"
+               font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2f-A.woff"
+               anchorX="center"
+               anchorY="middle"
+             >
+               {asset.title.toUpperCase()}
+             </Text>
+           )}
+         </Suspense>
 
          {/* Neon Frame Border (Horizontal sides for landscape look) */}
          <mesh position={[0, 1.65, 0.01]}>

@@ -1,10 +1,9 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { PerspectiveCamera, Environment, ContactShadows, Float } from '@react-three/drei';
-import { useState, useRef, useEffect } from 'react';
+import { PerspectiveCamera, Environment, ContactShadows, Float, Loader } from '@react-three/drei';
+import { useState, useRef, useEffect, Suspense } from 'react';
 import * as THREE from 'three';
 import { Pavement, Infrastructure, Pillar } from './ThreeWorldItems';
 import { ASSETS } from '../constants';
-import { animate } from 'motion';
 
 function CameraController({ targetZ }: { targetZ: number }) {
   const ref = useRef<THREE.PerspectiveCamera>(null);
@@ -40,8 +39,8 @@ export function ThreeScene({ currentIndex, assets }: { currentIndex: number, ass
   const targetZ = -currentIndex * 30;
 
   return (
-    <div className="w-full h-full bg-slate-200 absolute inset-0">
-      <Canvas shadows gl={{ antialias: true }}>
+    <div className="w-full h-full bg-[#b0bdcc] absolute inset-0">
+      <Canvas shadows gl={{ antialias: true, alpha: true }}>
         <color attach="background" args={['#b0bdcc']} />
         
         <CameraController targetZ={targetZ} />
@@ -54,7 +53,7 @@ export function ThreeScene({ currentIndex, assets }: { currentIndex: number, ass
            shadow-mapSize={[2048, 2048]}
         />
 
-        <fog attach="fog" args={['#b0bdcc', 30, 200]} />
+        <fog attach="fog" args={['#b0bdcc', 30, 250]} />
 
         <Pavement />
         <Infrastructure />
@@ -63,7 +62,10 @@ export function ThreeScene({ currentIndex, assets }: { currentIndex: number, ass
            <Pillar key={asset.id} index={index} asset={asset} />
         ))}
 
-        <Environment preset="city" />
+        <Suspense fallback={null}>
+          <Environment preset="city" />
+        </Suspense>
+
         <ContactShadows 
            position={[0, 0, 0]} 
            opacity={0.25} 
@@ -74,6 +76,7 @@ export function ThreeScene({ currentIndex, assets }: { currentIndex: number, ass
            color="#000000" 
         />
       </Canvas>
+      <Loader />
     </div>
   );
 }
