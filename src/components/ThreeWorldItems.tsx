@@ -15,7 +15,7 @@ export function Pavement() {
       </mesh>
       
       {/* Road Markings */}
-      {Array.from({ length: 100 }).map((_, i) => (
+      {Array.from({ length: 50 }).map((_, i) => (
         <mesh key={i} rotation-x={-Math.PI / 2} position={[0, 0, -i * 20]} receiveShadow>
           <planeGeometry args={[0.15, 5]} />
           <meshStandardMaterial color="#fff" transparent opacity={0.4} />
@@ -23,12 +23,12 @@ export function Pavement() {
       ))}
 
       {/* Sidewalk/Curb */}
-      <mesh rotation-x={-Math.PI / 2} position={[7, 0.1, -500]} receiveShadow>
-        <planeGeometry args={[4, 2000]} />
+      <mesh rotation-x={-Math.PI / 2} position={[7, 0.1, -250]} receiveShadow>
+        <planeGeometry args={[4, 1000]} />
         <meshStandardMaterial color="#444" />
       </mesh>
-      <mesh rotation-x={-Math.PI / 2} position={[-7, 0.1, -500]} receiveShadow>
-        <planeGeometry args={[4, 2000]} />
+      <mesh rotation-x={-Math.PI / 2} position={[-7, 0.1, -250]} receiveShadow>
+        <planeGeometry args={[4, 1000]} />
         <meshStandardMaterial color="#444" />
       </mesh>
     </group>
@@ -39,7 +39,7 @@ export function Infrastructure() {
   return (
     <group>
       {/* Repeating Bridge Segments */}
-      {Array.from({ length: 250 }).map((_, i) => (
+      {Array.from({ length: 120 }).map((_, i) => (
         <group key={i} position={[0, 8, -i * 8]}>
           {/* Main Massive Top Beam (Transverse) */}
           <mesh position={[0, 0, 0]} castShadow receiveShadow>
@@ -106,14 +106,14 @@ export function Infrastructure() {
       ))}
 
       {/* Ground Infrastructure Details */}
-      <group position={[10.5, 0, -500]}>
+      <group position={[10.5, 0, -250]}>
         {/* Striped Barrier */}
         <mesh position={[0, 0.5, 0]} receiveShadow>
-          <boxGeometry args={[1, 1, 1000]} />
+          <boxGeometry args={[1, 1, 500]} />
           <meshStandardMaterial color="#666" />
         </mesh>
         {/* Zebra Stripes Logic */}
-        {Array.from({ length: 250 }).map((_, i) => (
+        {Array.from({ length: 125 }).map((_, i) => (
           <mesh key={i} position={[0, 1.01, i * 4 - 500]}>
              <planeGeometry args={[1.1, 1]} />
              <meshStandardMaterial color={i % 2 === 0 ? "#111" : "#fff"} />
@@ -211,7 +211,6 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
                color="#fff"
                maxWidth={4}
                textAlign="center"
-               font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2f-A.woff"
                anchorX="center"
                anchorY="middle"
              >
