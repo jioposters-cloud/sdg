@@ -211,6 +211,7 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
                color="#fff"
                maxWidth={4}
                textAlign="center"
+               font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2f-A.woff"
                anchorX="center"
                anchorY="middle"
              >

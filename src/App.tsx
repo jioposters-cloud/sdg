@@ -52,16 +52,11 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [goToNext, goToPrev]);
 
-  // Delay the details appearance for transitions, but show immediately for first load
+  // Delay the details appearance
   useEffect(() => {
-    if (currentIndex === 0 && !showDetails) {
-      setShowDetails(true);
-      return;
-    }
-    
     const timer = setTimeout(() => {
       setShowDetails(true);
-    }, 1000); 
+    }, 1200); // Wait for camera transition to mostly complete
     return () => clearTimeout(timer);
   }, [currentIndex]);
 
