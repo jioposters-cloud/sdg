@@ -196,7 +196,7 @@ export function Pillar({ index, asset }: { index: number; asset: typeof ASSETS[0
              LOADING...
            </Text>
          }>
-           {asset.imageUrl && index < 10 ? (
+           {asset.imageUrl ? (
              <Image 
                 url={asset.imageUrl} 
                 transparent 
