@@ -16,35 +16,11 @@ export interface AssetInfo {
 export const ASSETS: AssetInfo[] = [
   {
     id: '1',
-    title: 'Status Ring - Elight',
-    subtitle: 'Online Shop & Printing',
-    description: 'Exclusive online platform shop for home decor, table tops, posters, and custom gifts.',
-    imageUrl: 'https://i.postimg.cc/nLqFSBtG/image.png',
-    pillarId: '01',
-    mobile: '09033661813',
-    whatsapp: '09033661813',
-    website: 'https://mydeesa.statusring.in',
-    location: '14, 15 Hardik Complex, Tin Hanuman Mandir Road, Deesa',
-    category: 'Online Shop'
-  },
-  {
-    id: '2',
-    title: 'Elight Electric',
-    subtitle: 'Electrician',
-    description: 'Professional electrician services in Deesa. Expert in home and commercial electrical work.',
-    imageUrl: 'https://i.postimg.cc/brVSYkrC/image.png',
-    pillarId: '02',
-    mobile: '09979354060',
-    website: 'https://wa.link/e6l3p5',
-    category: 'Electronics'
-  },
-  {
-    id: '3',
     title: 'Dr. Ankit M. Patel',
     subtitle: 'Dentist - Doctors',
     description: 'Expert dental care services located in Deesa. Specializing in modern dentistry.',
     imageUrl: 'https://i.postimg.cc/MHSC1TXb/image.png',
-    pillarId: '03',
+    pillarId: '01',
     mobile: '09033661813',
     whatsapp: '09033661813',
     website: 'https://drankitpatel.com',
@@ -52,24 +28,50 @@ export const ASSETS: AssetInfo[] = [
     category: 'Doctors'
   },
   {
+    id: '2',
+    title: 'Rental / ભાડે આપવું',
+    subtitle: 'Real Estate Solutions',
+    description: 'Looking for a house, land, or shop? Contact us for the best rental deals in the area.',
+    imageUrl: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6ff8aa57490547.59d7a60d50a42.gif',
+    pillarId: '02',
+    mobile: '9016284250',
+    whatsapp: '9016284250',
+    website: 'https://wa.link/fzv',
+    location: 'Deesa',
+    category: 'Rental'
+  },
+  {
+    id: '3',
+    title: 'Property Sell',
+    subtitle: 'Residential & Commercial',
+    description: 'Premier property listings for selling land, houses, and commercial buildings.',
+    imageUrl: 'https://i.postimg.cc/nLqFSBtG/image.png',
+    pillarId: '03',
+    mobile: '9016284250',
+    location: 'Deesa',
+    category: 'Property'
+  },
+  {
     id: '4',
-    title: 'Patel Sales',
-    subtitle: 'Electronics & Electrics',
-    description: 'Serving Deesa with quality electronics and electrical appliances for over a decade.',
-    imageUrl: 'https://i.postimg.cc/k4G6jLdK/image.png',
+    title: 'Status Ring - Eight',
+    subtitle: 'Online Shop & Printing',
+    description: 'Customized print-on-demand services and premium products available online.',
+    imageUrl: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop',
     pillarId: '04',
-    mobile: '02744221110',
-    website: 'https://saiimpex.my.canva.site/mydeesa',
-    category: 'Electronics'
+    mobile: '09033661813',
+    website: 'https://mydeesa.store',
+    location: 'andir road, Deesa',
+    category: 'Online Shop'
   },
   {
     id: '5',
-    title: 'Welcome Electronics',
-    subtitle: 'TV, Fridge & AC',
-    description: 'Deesa\'s premier destination for home entertainment and cooling systems.',
-    imageUrl: 'https://i.postimg.cc/sXb7ndhB/image.png',
+    title: 'Patel Sales',
+    subtitle: 'Electronics & Electrics',
+    description: 'Wholesale and retail of premium electronic goods and home appliances.',
+    imageUrl: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=800&auto=format&fit=crop',
     pillarId: '05',
-    mobile: '02744221125',
+    mobile: '02744221110',
+    website: 'https://saiimpex.my.canva.site/mydeesa',
     category: 'Electronics'
   },
   {
@@ -80,6 +82,7 @@ export const ASSETS: AssetInfo[] = [
     imageUrl: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=800&auto=format&fit=crop',
     pillarId: '06',
     mobile: '02744220481',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -90,6 +93,7 @@ export const ASSETS: AssetInfo[] = [
     imageUrl: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=800&auto=format&fit=crop',
     pillarId: '07',
     mobile: '02744220333',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -100,26 +104,29 @@ export const ASSETS: AssetInfo[] = [
     imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
     pillarId: '08',
     mobile: '02744224361',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '9',
     title: 'Sarvoday Electronics',
-    subtitle: 'TV, Fridge & AC',
-    description: 'Expert sales and service for all major appliance brands in Deesa.',
-    imageUrl: 'https://i.postimg.cc/k4G6jLdK/image.png',
+    subtitle: 'Appliances & AC',
+    description: 'TV, Fridge, Freezer, and AC service and retail center.',
+    imageUrl: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800&auto=format&fit=crop',
     pillarId: '09',
     mobile: '09825128514',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '10',
-    title: 'Shree Jalaram Appliances',
-    subtitle: 'TV, Fridge & AC',
-    description: 'Top-quality kitchen and home appliances with reliable after-sales service.',
-    imageUrl: 'https://i.postimg.cc/qvt17822/image.png',
+    title: 'Welcome Electronics',
+    subtitle: 'Electronics & Services',
+    description: 'Complete home entertainment systems and electronic repair services.',
+    imageUrl: 'https://images.unsplash.com/photo-1593344484962-796055d4a3a4?q=80&w=800&auto=format&fit=crop',
     pillarId: '10',
-    mobile: '02744222226',
+    mobile: '02744221125',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -130,129 +137,137 @@ export const ASSETS: AssetInfo[] = [
     imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop',
     pillarId: '11',
     mobile: '09925652233',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '12',
     title: 'Shree Ganesh Electricals',
-    subtitle: 'Electronics & Electrics',
+    subtitle: 'Component Supply',
     description: 'A wide range of high-quality electrical components and wiring solutions.',
     imageUrl: '',
     pillarId: '12',
     mobile: '09228150365',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '13',
-    title: 'Jay bhairva ELECTRICALS',
-    subtitle: 'Electronics & Electrics',
+    title: 'Jay Bhairva Electricals',
+    subtitle: 'Lighting & Power',
     description: 'Modern lighting fixtures and energy-efficient power management systems.',
     imageUrl: '',
     pillarId: '13',
     mobile: '09426175593',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '14',
     title: 'Savera Electric Agency',
-    subtitle: 'Electronics & Electrics',
-    description: 'Trusted distributor of leading electrical brands and lighting solutions.',
-    imageUrl: 'https://i.postimg.cc/0jXQX0P8/image.png',
+    subtitle: 'Distribution',
+    description: 'Authorized distributor for leading electrical brands and appliance manufacturers.',
+    imageUrl: '',
     pillarId: '14',
     mobile: '02744221892',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '15',
     title: 'Jyoti Electrical',
-    subtitle: 'Electronics & Electrics',
-    description: 'Specialized electrical services and supply for household and commercial needs.',
-    imageUrl: 'https://i.postimg.cc/tCc2Lh1B/image.png',
+    subtitle: 'Home & Industrial',
+    description: 'Comprehensive electrical services for both residential and industrial projects.',
+    imageUrl: '',
     pillarId: '15',
     mobile: '9898702414',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '16',
-    title: 'ELECTRONICS WORLD',
-    subtitle: 'Electronics & Electrics',
+    title: 'Electronics World',
+    subtitle: 'Gadgets & More',
     description: 'The ultimate destination for the latest gadgets and consumer technology.',
     imageUrl: '',
     pillarId: '16',
     mobile: '8401233233',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '17',
-    title: 'Rental / ભાડે આપવું',
-    subtitle: 'Real Estate Solutions',
-    description: 'Looking for a house, land, or shop? Contact us for the best rental deals in the area.',
-    imageUrl: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6ff8aa57490547.59d7a60d50a42.gif',
+    title: 'Shree Jalaram Appliances',
+    subtitle: 'Kitchen & Home',
+    description: 'Premium kitchen appliances and home convenience products.',
+    imageUrl: '',
     pillarId: '17',
-    mobile: '9016284250',
-    whatsapp: '9016284250',
-    website: 'https://wa.link/fzv',
-    location: 'Deesa',
-    category: 'Rental'
+    mobile: '02744222226',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
   },
   {
     id: '18',
-    title: 'Property Sell',
-    subtitle: 'Residential & Commercial',
-    description: 'Premier property listings for selling land, houses, and commercial buildings.',
-    imageUrl: 'https://i.postimg.cc/nLqFSBtG/image.png',
+    title: 'Vimal Electronics',
+    subtitle: 'Service Center',
+    description: 'Reliable repair services for all your electronic devices and systems.',
+    imageUrl: '',
     pillarId: '18',
-    mobile: '9016284250',
-    location: 'Deesa',
-    category: 'Property'
+    mobile: '02744220333',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
   },
   {
     id: '19',
-    title: 'Dr. C.K PATEL',
-    subtitle: 'Pediatritian Child specialist',
-    description: 'Expert pediatric care center in Deesa for your children\'s health needs.',
+    title: 'Vandana Power',
+    subtitle: 'Energy Solutions',
+    description: 'Innovative energy solutions and UPS systems for uninterrupted power.',
     imageUrl: '',
     pillarId: '19',
-    mobile: '02744223253',
-    category: 'Doctors'
+    mobile: '02744224361',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
   },
   {
     id: '20',
-    title: 'Dr. Hiren Patel',
-    subtitle: 'Physician',
-    description: 'Providing comprehensive medical consulting and general health care.',
-    imageUrl: '',
+    title: 'Elight Electric',
+    subtitle: 'Electrical Supplies',
+    description: 'Leading wholesalers of electrical switches, wires, and lighting solutions in Deesa.',
+    imageUrl: 'https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=800&auto=format&fit=crop',
     pillarId: '20',
-    mobile: '02744222646',
-    category: 'Doctors'
+    mobile: '09979354060',
+    website: 'https://saiimpex.my',
+    category: 'Electronics'
   },
   {
     id: '21',
-    title: 'Bhupatsing jenaji Parmar',
+    title: 'Bhupatsing Jenaji Parmar',
     subtitle: 'Electronic Service Ran',
     description: 'Specialized maintenance and repair services for industrial and household electronics.',
     imageUrl: '',
     pillarId: '21',
     mobile: '8980944271',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '22',
-    title: 'Vimal Sales (Service)',
-    subtitle: 'Service Center',
-    description: 'Reliable repair services for all your electronic devices and systems.',
+    title: 'Apex Electricals',
+    subtitle: 'Industrial Solutions',
+    description: 'Wholesale suppliers of electrical cables, breakers, and high-voltage equipment.',
     imageUrl: '',
     pillarId: '22',
-    mobile: '02744220333',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
     id: '23',
-    title: 'Jay Jalaram',
-    subtitle: 'Electronics & Electrics',
-    description: 'Authorized dealer for major electrical brands and home utilities.',
+    title: 'Deesa Solar Systems',
+    subtitle: 'Renewable Energy',
+    description: 'Eco-friendly solar panel installations and maintenance for sustainable power.',
     imageUrl: '',
     pillarId: '23',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -262,6 +277,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'Premium quality wires and robust transmission cables for heavy-duty usage.',
     imageUrl: '',
     pillarId: '24',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -271,6 +287,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'Transform your living space with integrated smart home and lighting automation.',
     imageUrl: '',
     pillarId: '25',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -280,6 +297,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'Reliable electrical contracting for large-scale urban infrastructure projects.',
     imageUrl: '',
     pillarId: '26',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -289,6 +307,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'Diagnostics and hardware repair for high-precision laboratory and office tech.',
     imageUrl: '',
     pillarId: '27',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -298,6 +317,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'Architectural lighting design that merges aesthetic appeal with energy efficiency.',
     imageUrl: '',
     pillarId: '28',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -307,6 +327,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'High-quality protection gear and automatic cut-off switches for power boards.',
     imageUrl: '',
     pillarId: '29',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
   {
@@ -316,6 +337,7 @@ export const ASSETS: AssetInfo[] = [
     description: 'Expert PCB board design and electronic component assembly services.',
     imageUrl: '',
     pillarId: '30',
+    website: 'https://saiimpex.my',
     category: 'Electronics'
   },
 ];
